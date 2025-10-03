@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Zalando Sans';
+    box-sizing: border-box;
+}
+body {
+    height: 100px;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.weather-input {
+    width: 30%;
+    position: fixed;
+    inset: 0;
+    background: orange;
+    padding: 1rem 2.5rem;
+}
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    display: block;
+    height: 25%;
+    margin: 2rem auto;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+.input-group input {
+    background: skyblue;
+    text-transform: capitalize;
+    padding: 2rem;
+    font-size: 17px;
+    border-radius: 7px;
+    width: 800%;
+    outline: auto;
+    border: skyblue;
+}
+.input-group .converter {
+    position: absolute;
+    right: 85px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.input-group .fa-search {
+    position: absolute;
+    right: 20px;
+    color: blue;
+    cursor: pointer;
+    font-size: 20px;
+}
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city {
+    padding: 10px 0;
+}
+.weather-output {
+    width: 70%;
+    position: fixed;
+    inset: 0;
+    margin-left: 30%;
+    padding: 2rem;
+    background: white;
+    overflow: auto;
+}
+.temperature {
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+}
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+.forecast div {
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: green;
+    border-radius: 25px;
+    padding: 1rem;
+}
+.forecast i {
+    font-size: 50px;
+}
+.update #weekly {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+.update #weekly div {
+    height: 200px;
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center;     
+    text-align: center;
+    background-color: yellow;
+    border-radius: 25px;
+    padding: 1rem;
+}
+.update #weekly div img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;   
+    height: 60px;
+}
+.sun span {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .forecast,
+    .update #weekly {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
